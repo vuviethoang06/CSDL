@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Mẫu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Các lớp CSS tùy chỉnh để dễ dàng thay đổi màu sau này */
+        .primary-bg { background-color: var(--primary-color, #007bff); }
+        .secondary-bg { background-color: var(--secondary-color, #6c757d); }
+        .accent-bg { background-color: var(--accent-color, #28a745); }
+        .text-primary-color { color: var(--primary-color, #007bff); }
+        .text-secondary-color { color: var(--secondary-color, #6c757d); }
+        .text-accent-color { color: var(--accent-color, #28a745); }
+        .btn-primary-custom {
+            background-color: var(--primary-color, #007bff);
+            color: white;
+            border-color: var(--primary-color, #007bff);
+        }
+        .btn-primary-custom:hover {
+            background-color: var(--darker-primary-color, #0056b3);
+            border-color: var(--darker-primary-color, #0056b3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <header class="text-center mb-5 p-4 primary-bg text-white">
+            <h1>Tiêu đề Newsletter</h1>
+            <p>Nơi bắt đầu những câu chuyện mới</p>
+        </header>
+
+        <section class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title text-primary-color">Chào mừng bạn đến với bản tin của chúng tôi!</h2>
+                <p class="card-text">
+                    Đây là nội dung ví dụ cho phần giới thiệu. Chúng ta sẽ thay đổi màu sắc cho các thành phần này.
+                </p>
+                <a href="#" class="btn btn-primary-custom">Tìm hiểu thêm</a>
+            </div>
+        </section>
+
+        <section class="row mb-4">
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 secondary-bg text-white">
+                    <div class="card-body">
+                        <h3 class="card-title">Tính năng nổi bật 1</h3>
+                        <p class="card-text">Mô tả ngắn gọn về tính năng này. Màu nền và màu chữ sẽ được phối lại.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card h-100 accent-bg text-white">
+                    <div class="card-body">
+                        <h3 class="card-title">Tính năng nổi bật 2</h3>
+                        <p class="card-text">Mô tả ngắn gọn về tính năng khác. Hãy thử các sắc thái màu khác nhau.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-5 p-3 secondary-bg text-white">
+            <p>&copy; 2024 Tên Công ty. Mọi quyền được bảo lưu.</p>
+        </footer>
+    </div>
+    <!-- Liên kết Bootstrap JS (tùy chọn nếu không cần tương tác) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

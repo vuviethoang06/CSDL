@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành nhúng CSS</title>
+
+    <!-- PHẦN 3: Nhúng External Style Sheet từ file style.css bên ngoài -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PHẦN 2: Định kiểu bằng Internal Style Sheet (nằm trong thẻ <style>) -->
+    <style>
+        /* CSS cho Phần 2 */
+        .internal-heading {
+            color: darkgreen;
+        }
+        .internal-text {
+            color: darkorange;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =================================================================== -->
+    <!-- PHẦN 1: Thay đổi màu sắc sử dụng Inline CSS (thuộc tính style) -->
+    <!-- =================================================================== -->
+    <section>
+        <h1 style="color: blue;">Phần 1: Tiêu đề dùng Inline CSS</h1>
+        <p style="color: red;">Đoạn văn bản sử dụng Inline CSS trực tiếp trên thẻ HTML.</p>
+    </section>
+
+    <hr>
+
+    <!-- =================================================================== -->
+    <!-- PHẦN 2: Thay đổi màu sắc sử dụng Internal CSS (thẻ <style>) -->
+    <!-- =================================================================== -->
+    <section>
+        <h1 class="internal-heading">Phần 2: Tiêu đề dùng Internal CSS</h1>
+        <p class="internal-text">Đoạn văn bản sử dụng Internal CSS định nghĩa trong thẻ style ở head.</p>
+    </section>
+
+    <hr>
+
+    <!-- =================================================================== -->
+    <!-- PHẦN 3: Thay đổi màu sắc sử dụng External CSS (file style.css) -->
+    <!-- =================================================================== -->
+    <section>
+        <h1 class="external-heading">Phần 3: Tiêu đề dùng External CSS</h1>
+        <p class="external-text">Đoạn văn bản sử dụng External CSS liên kết với file style.css bên ngoài.</p>
+    </section>
+
+</body>
+</html>
