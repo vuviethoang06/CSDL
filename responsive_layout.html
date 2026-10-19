@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with DIV and CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* 1. NAVBAR (Thanh điều hướng trên cùng) */
+        .navbar {
+            background-color: #222222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 50px;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .navbar a {
+            color: #9d9d9d;
+            text-decoration: none;
+            padding: 0 15px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .navbar a:hover {
+            color: #ffffff;
+        }
+
+        .navbar a.active {
+            color: #ffffff;
+            background-color: #080808;
+        }
+
+        .navbar .logo {
+            color: #ffffff;
+            font-size: 18px;
+            padding-right: 20px;
+        }
+
+        /* 2. MAIN CONTAINER (Khung nội dung chính) */
+        .main-container {
+            display: flex;
+            flex: 1;
+            background-color: #f1f1f1;
+        }
+
+        /* Sidebars Trái & Phải */
+        .sidebar-left {
+            width: 18%;
+            background-color: #e8e8e8;
+            padding: 20px 10px;
+            text-align: right;
+        }
+
+        .sidebar-left a {
+            display: block;
+            color: #337ab7;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .sidebar-left a:hover {
+            text-decoration: underline;
+        }
+
+        /* Nội dung giữa */
+        .content {
+            width: 64%;
+            background-color: #ffffff;
+            padding: 30px;
+        }
+
+        .content h1 {
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 15px;
+            color: #222222;
+        }
+
+        .content h3 {
+            font-size: 20px;
+            font-weight: normal;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #222222;
+        }
+
+        .content p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333333;
+        }
+
+        .content hr {
+            border: 0;
+            border-top: 1px solid #eeeeee;
+            margin: 25px 0;
+        }
+
+        .sidebar-right {
+            width: 18%;
+            background-color: #e8e8e8;
+            padding: 20px 15px;
+        }
+
+        .ads-box {
+            background-color: #f5f5f5;
+            border: 1px solid #dcdcdc;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: #555555;
+            font-size: 13px;
+            border-radius: 3px;
+        }
+
+        /* 3. FOOTER (Chân trang) */
+        .footer {
+            background-color: #555555;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* 4. RESPONSIVE DESIGN (Media Queries cho thiết bị di động/máy tính bảng) */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                height: auto;
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .nav-left, .nav-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .navbar a {
+                padding: 8px 10px;
+            }
+
+            .main-container {
+                flex-direction: column;
+            }
+
+            .sidebar-left, .content, .sidebar-right {
+                width: 100%;
+            }
+
+            .sidebar-left {
+                text-align: center;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .ads-box {
+                max-width: 300px;
+                margin: 0 auto 15px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="#" class="logo">Logo</a>
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="nav-right">
+            <a href="#">&#10145; Login</a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="main-container">
+        <!-- LEFT SIDEBAR -->
+        <div class="sidebar-left">
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="content">
+            <h1>Welcome</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            
+            <hr>
+
+            <h3>Test</h3>
+            <p>Lorem ipsum...</p>
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="sidebar-right">
+            <div class="ads-box">ADS</div>
+            <div class="ads-box">ADS</div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        Footer Text
+    </div>
+
+</body>
+</html>
