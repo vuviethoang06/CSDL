@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; background: #f4f6f8; margin: 0; color: #222; }
+.container { max-width: 900px; margin: 40px auto; background: #fff; padding: 24px 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.container.narrow { max-width: 480px; }
+h1 { margin-top: 0; }
+table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+th, td { padding: 10px 12px; border-bottom: 1px solid #e5e7eb; text-align: left; }
+th { background: #f0f2f5; }
+.num { text-align: right; }
+.empty { text-align: center; color: #888; padding: 24px; }
+.actions { display: flex; gap: 6px; align-items: center; }
+.actions form { margin: 0; }
+.btn { display: inline-block; padding: 7px 14px; border: none; border-radius: 4px; font-size: 14px; cursor: pointer; text-decoration: none; color: #fff; }
+.btn-primary { background: #2563eb; }
+.btn-edit { background: #f59e0b; }
+.btn-delete { background: #dc2626; }
+.btn-secondary { background: #6b7280; }
+.btn:hover { opacity: .9; }
+label { display: block; margin: 14px 0 4px; font-weight: 600; }
+input[type=text], input[type=number] { width: 100%; padding: 9px 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 15px; }
+.form-actions { margin-top: 20px; display: flex; gap: 8px; }
+.alert { background: #fee2e2; color: #991b1b; padding: 10px 14px; border-radius: 4px; margin-bottom: 8px; }
