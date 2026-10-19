@@ -1,25 +1,23 @@
 # NHẬT KÝ TƯƠNG TÁC AI (AI PROMPT LOG)
 
-## Prompt 1: Tìm hiểu Covering Index và ảnh hưởng tới Read/Write
-- **User:** "Trong MySQL InnoDB, Covering Index là gì? Tại sao việc nhét tất cả các cột vào Index lại giúp câu lệnh SELECT chạy siêu nhanh nhưng lại gây thảm họa sụp đổ tốc độ GHI (INSERT) cho hệ thống IoT lưu trữ dữ liệu thời gian thực?"
-- **AI Response Summary:** AI giải thích Covering Index giúp câu lệnh SELECT lấy dữ liệu trực tiếp trên cây Index B-Tree mà không cần thực hiện Bookmark Lookup về Data Page (Clustered Index). Tuy nhiên, với hệ thống GHI liên tục, mỗi bản ghi mới bắt buộc phải cập nhật cây B-Tree cồng kềnh, gây ra xung đột Random I/O, tách trang (Page Split) và tăng Write Penalty.
+## Prompt 1: Phân tích bản chất 1D và 2D giữa Flexbox và CSS Grid
+- **User:** "Khi tôi cần một bố cục mà một phần tử con (Child) phải chiếm chính xác 2 hàng và 2 cột (span 2 rows, 2 columns) đan xen với các phần tử nhỏ khác, tôi nên chọn CSS Grid hay Flexbox? Tại sao Flexbox lại chật vật với yêu cầu này?"
+- **AI Summary:** AI phân tích Flexbox là hệ thống dàn trang 1 chiều (1D). Mỗi hàng/cột trong Flexbox hoạt động độc lập và không biết sự tồn tại của các hàng khác, do đó Flexbox không thể bắt một item chiếm không gian trên 2 hàng đồng thời mà không tạo ra các thẻ bọc phức tạp. CSS Grid là hệ thống 2D, quản lý đồng thời cả hàng và cột, cho phép dùng `grid-column: span 2` và `grid-row: span 2` cực kỳ dễ dàng.
 
 ---
 
-## Prompt 2: Tìm hiểu phân bổ dữ liệu Clustered Index và Secondary Index
-- **User:** "Hãy giải thích sự khác biệt trong cách MySQL InnoDB lưu trữ dữ liệu giữa Clustered Index (Primary Key) và Secondary Index. Tại sao Secondary Index lại chứa giá trị của Primary Key?"
-- **AI Response Summary:** Clustered Index lưu trữ toàn bộ dòng dữ liệu thực tế tại các lá của cây B-Tree (sắp xếp theo Primary Key). Secondary Index chỉ lưu các cột được đánh index cùng với giá trị Primary Key tương ứng. Khi truy vấn không phải Covering Index, MySQL phải dùng Primary Key từ Secondary Index để "nhảy" sang Clustered Index lấy đầy đủ thông tin (Lookup Table).
+## Prompt 2: Khai thác tính năng của Bootstrap 5 Grid
+- **User:** "Trong Bootstrap 5, sự khác biệt giữa lớp col-sm-4 và col-md-4 là gì? Tại sao tôi nên dùng Bootstrap cho một phần tử đơn giản như 3 cột Bảng giá thay vì tự viết CSS Grid?"
+- **AI Summary:** `col-sm-4` kích hoạt điểm ngắt ở màn hình Small (>= 576px), trong khi `col-md-4` kích hoạt ở Medium (>= 768px). Dùng Bootstrap cho Bảng giá giúp tái sử dụng mã nguồn chuẩn, hỗ trợ giao diện Responsive sẵn có (stack hàng dọc ở mobile và thành 3 cột ở desktop) cùng hệ thống UI Card đồng bộ mà không cần bảo trì các Media Queries thủ công.
 
 ---
 
-## Prompt 3: Tính toán dung lượng Byte của các kiểu dữ liệu trong MySQL
-- **User:** "Hãy cho tôi bảng tính toán chi tiết dung lượng lưu trữ tính bằng Byte của các kiểu dữ liệu trong MySQL: INT, BIGINT, DATETIME, DECIMAL(5,2), VARCHAR(20) và TINYINT. Nếu 1 dòng trong Index giảm được 20 bytes thì với 10 triệu dòng sẽ tiết kiệm được bao nhiêu MB?"
-- **AI Response Summary:** 
-  - INT: 4 bytes | BIGINT: 8 bytes | DATETIME: 5 bytes | DECIMAL(5,2): 3 bytes | TINYINT: 1 byte | VARCHAR(20): 1 + N bytes (tối đa 21 bytes).
-  - Tính toán: 20 bytes x 10,000,000 dòng = 200,000,000 bytes ≈ 190.73 MB dung lượng RAM/Disk được giải phóng.
+## Prompt 3: Cú pháp Bento Box dùng CSS Grid
+- **User:** "Hãy cho tôi xem một cú pháp CSS Grid đơn giản (sử dụng span) để tạo một layout dạng Bento Box: có 1 hình vuông lớn bên trái chiếm 2x2, và các hình vuông nhỏ khác bên phải."
+- **AI Summary:** Cung cấp mã mẫu dùng `display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;`. Đặt cho item lớn class `grid-column: span 2; grid-row: span 2;`, giúp các item còn lại tự động lấp đầy các khoảng trống theo thuật toán xếp lưới của CSS Grid.
 
 ---
 
-## Prompt 4: Phân biệt các giá trị trong cột Extra của lệnh EXPLAIN
-- **User:** "Phân biệt ý nghĩa của các giá trị 'Using index', 'Using index condition', và 'Using where' trong cột Extra khi chạy lệnh EXPLAIN trong MySQL."
-- **AI Response Summary:** 'Using index' nghĩa là câu truy vấn dùng Covering Index (không cần đọc Table gốc). 'Using index condition' (Index Condition Pushdown) nghĩa là dùng Index để lọc dữ liệu trước khi Lookup về Table. 'Using where' nghĩa là MySQL phải lọc dữ liệu sau khi đã lấy dữ liệu từ Table gốc.
+## Prompt 4: Mở rộng kiến thức về thuộc tính `gap`
+- **User:** "Thuộc tính gap hỗ trợ như thế nào trong cả CSS Grid và Flexbox? Tại sao nên dùng gap thay vì margin trong dàn trang hiện đại?"
+- **AI Summary:** Thuộc tính `gap` (hoặc `row-gap`, `column-gap`) tạo khoảng cách trực tiếp giữa các item trong container mà không tạo ra khoảng thừa ở phần tử đầu/cuối (tránh lỗi margin collapse). Hiện tại `gap` đã được hỗ trợ native trên toàn bộ trình duyệt hiện đại cho cả CSS Grid lẫn Flexbox.
