@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đọc Truyện Online - Đế Vương Huyền Thoại</title>
+    
+    <style>
+        /* =====================================================================
+           TỔNG THỂ TRANG WEB
+           ===================================================================== */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Bước 4: Ảnh truyện đặt ở đầu trang */
+        .banner-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .story-banner {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* Bước 7: Tiêu đề và tác giả */
+        .story-title {
+            font-family: 'Georgia', serif;
+            font-size: 32px;
+            color: #1b4965;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .story-author {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Bước 8: Khối mục lục (khung viền, màu nền, padding, hover) */
+        .table-of-contents {
+            background-color: #f0f7f9;
+            border: 1px solid #bee9e8;
+            border-radius: 6px;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+        }
+
+        .table-of-contents h3 {
+            margin-top: 0;
+            color: #62b6cb;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 8px;
+        }
+
+        /* Bước 5 & 8: Thẻ h5 cho từng mục lục và liên kết */
+        .table-of-contents h5 {
+            font-size: 16px;
+            margin: 10px 0;
+            font-weight: normal;
+        }
+
+        .table-of-contents a {
+            color: #1b4965;
+            text-decoration: none; /* Bỏ gạch chân mặc định */
+            transition: color 0.2s ease-in-out;
+        }
+
+        /* Hiệu ứng hover cho liên kết */
+        .table-of-contents a:hover {
+            color: #e63946;
+            text-decoration: underline; /* Hiện gạch chân khi rê chuột */
+        }
+
+        /* Bước 9: Canh lề, giãn dòng cho thân truyện */
+        .chapter {
+            margin-bottom: 35px;
+            padding-top: 10px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .chapter h2 {
+            color: #2c3e50;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .chapter p {
+            font-size: 16px;
+            line-height: 1.8;      /* Giãn dòng */
+            text-align: justify;   /* Canh đều 2 bên */
+            text-indent: 30px;     /* Lùi đầu dòng */
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Bước 4: Ảnh truyện đầu trang -->
+        <div class="banner-box">
+            <img src="https://picsum.photos/800/250" alt="Ảnh bìa truyện" class="story-banner">
+        </div>
+
+        <!-- Bước 7: Tiêu đề truyện -->
+        <h1 class="story-title">ĐẾ VƯƠNG HUYỀN THOẠI</h1>
+        <p class="story-author">Tác giả: Nguyễn Văn A | Thể loại: Tiên Hiệp, Cổ Trang</p>
+
+        <!-- Bước 1 & 5: Mục lục truyện sử dụng thẻ <h5> -->
+        <div class="table-of-contents">
+            <h3>MỤC LỤC TRUYỆN</h3>
+            <!-- Bước 3: Liên kết chuyển tới từng nội dung tương ứng -->
+            <h5><a href="#chuong-1">Chương 1: Khởi Đầu Mới Trên Đỉnh Núi Tuyết</a></h5>
+            <h5><a href="#chuong-2">Chương 2: Bí Bật Trong Cuốn Bí Kíp Cổ</a></h5>
+            <h5><a href="#chuong-3">Chương 3: Trận Chiến Đầu Tiên Tại Thành Cổ</a></h5>
+        </div>
+
+        <!-- Bước 2: Nội dung ứng với từng mục lục -->
+        <div class="story-content">
+            
+            <article id="chuong-1" class="chapter">
+                <h2>Chương 1: Khởi Đầu Mới Trên Đỉnh Núi Tuyết</h2>
+                <p>
+                    Gió tuyết rít gào trên đỉnh núi Tuyết Sơn. Lâm Phong đứng lặng yên trên vách đá cao chót vót, ánh mắt nhìn chằm chằm về phía thung lũng xa xăm. Sau ba năm bế quan tu luyện, cuối cùng hắn cũng đã đột phá được cảnh giới quan trọng nhất của cuộc đời mình.
+                </p>
+                <p>
+                    Từng luồng linh khí hội tụ xung quanh cơ thể hắn, tạo nên một vầng sáng nhạt giữa đêm đông lạnh giá. Hắn hít một hơi thật sâu, cảm nhận sức mạnh cuồn cuộn chảy trong từng huyết mạch. Hành trình trả thù và khẳng định bản thân của hắn giờ đây mới chính thức bắt đầu.
+                </p>
+            </article>
+
+            <article id="chuong-2" class="chapter">
+                <h2>Chương 2: Bí Bật Trong Cuốn Bí Kíp Cổ</h2>
+                <p>
+                    Bước xuống khỏi Tuyết Sơn, Lâm Phong tìm đến một quán trọ nhỏ nơi chân núi. Trong căn phòng tối mù sương, hắn cẩn thận lấy ra cuốn bí kíp bằng da thú ố vàng đã gắn bó với mình từ thời thơ ấu. Cuốn sách tưởng chừng vô giá trị này lại ẩn chứa một bí mật kinh thiên động địa.
+                </p>
+                <p>
+                    Khi nhỏ một giọt máu tươi lên trang sách đầu tiên, những ký tự cổ xưa bất ngờ phát sáng rực rỡ. Một luồng ký ức khổng lồ tràn vào tâm trí Lâm Phong, hé lộ về sự tồn tại của chín đại thần khí đã bị lãng quên hàng ngàn năm qua trên thế gian.
+                </p>
+            </article>
+
+            <article id="chuong-3" class="chapter">
+                <h2>Chương 3: Trận Chiến Đầu Tiên Tại Thành Cổ</h2>
+                <p>
+                    Tin đồn về sự xuất hiện của bí kíp cổ đã nhanh chóng lan truyền khắp cõi Trung Nguyên. Khi Lâm Phong vừa bước chân vào cổng thành Thiên An, hắn đã bị nhóm sát thủ của Hắc Phong Bang phục kích từ bốn phía.
+                </p>
+                <p>
+                    Không một chút nao núng, Lâm Phong tuốt thanh trường kiếm ngang hông. Ánh kiếm lóe lên như tia chớp giữa ban ngày. Chỉ trong vòng vài nhịp thở, toàn bộ đám sát thủ đã gục ngã dưới chân hắn. Sự xuất hiện của hắn đã chính thức làm rung chuyển giang hồ.
+                </p>
+            </article>
+
+        </div>
+    </div>
+
+</body>
+</html>
